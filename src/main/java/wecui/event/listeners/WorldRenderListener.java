@@ -1,10 +1,11 @@
 package wecui.event.listeners;
 
+import org.lwjgl.opengl.GL11;
+
+import wecui.WorldEditCUI;
+import wecui.event.WorldRenderEvent;
 import wecui.fevents.Listener;
 import wecui.obfuscation.Obfuscation;
-import wecui.WorldEditCUI;
-import org.lwjgl.opengl.GL11;
-import wecui.event.WorldRenderEvent;
 
 /**
  * Listener for WorldRenderEvent

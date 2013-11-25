@@ -6,6 +6,7 @@ import java.util.logging.ConsoleHandler;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import wecui.exception.InitializationException;
 import wecui.obfuscation.Obfuscation;
 import wecui.util.ConsoleLogFormatter;

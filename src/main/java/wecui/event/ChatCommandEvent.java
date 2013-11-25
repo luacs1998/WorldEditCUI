@@ -1,10 +1,11 @@
 package wecui.event;
 
-import wecui.fevents.Event;
-import wecui.fevents.HandlerList;
 import java.util.HashMap;
+
 import wecui.WorldEditCUI;
 import wecui.fevents.Cancellable;
+import wecui.fevents.Event;
+import wecui.fevents.HandlerList;
 
 /**
  * Events for outgoing commands to server. 

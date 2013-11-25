@@ -1,14 +1,15 @@
 package wecui.obfuscation;
 
-import deobf.Entity;
-import deobf.EntityClientPlayerMP;
-import deobf.EntityPlayerSP;
-import deobf.NetClientHandler;
-import deobf.Packet250CustomPayload;
-import deobf.Packet3Chat;
-import deobf.WorldClient;
 import java.io.File;
+
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.EntityClientPlayerMP;
+import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.client.multiplayer.NetClientHandler;
+import net.minecraft.client.multiplayer.WorldClient;
+import net.minecraft.entity.Entity;
+import net.minecraft.network.packet.Packet250CustomPayload;
+import net.minecraft.network.packet.Packet3Chat;
 import wecui.InitializationFactory;
 import wecui.WorldEditCUI;
 import wecui.render.RenderEntity;

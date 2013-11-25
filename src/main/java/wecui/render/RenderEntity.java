@@ -1,9 +1,9 @@
 package wecui.render;
 
-import deobf.Entity;
-import deobf.NBTTagCompound;
-import deobf.WorldClient;
-import deobf.Vec3;
+import net.minecraft.client.multiplayer.WorldClient;
+import net.minecraft.entity.Entity;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.Vec3;
 import wecui.WorldEditCUI;
 
 /**
@@ -11,8 +11,6 @@ import wecui.WorldEditCUI;
  * 
  * @author lahwran
  * @author yetanotherx
- * 
- * @obfuscated 1.4.5
  */
 public class RenderEntity extends Entity {
 
@@ -22,9 +20,9 @@ public class RenderEntity extends Entity {
         super(world);
 
         this.controller = controller;
-        this.al = true; // Entity.ignoreFrustumCheck
-        this.Y = true; // Entity.noClip
-        this.b(0, 0); // Entity.setSize()
+        this.ignoreFrustumCheck = true; // Entity.ignoreFrustumCheck
+        this.noClip = true; // Entity.noClip
+        this.setSize(0, 0); // Entity.setSize()
         controller.getDebugger().debug("Entity spawned");
     }
 
@@ -33,7 +31,7 @@ public class RenderEntity extends Entity {
      * @param arg0 
      */
     @Override
-    protected void a(NBTTagCompound arg0) {
+    protected void readEntityFromNBT(NBTTagCompound arg0) {
     }
 
     /**
@@ -41,21 +39,21 @@ public class RenderEntity extends Entity {
      * @param arg0 
      */
     @Override
-    protected void b(NBTTagCompound arg0) {
+    protected void writeEntityToNBT(NBTTagCompound arg0) {
     }
 
     /**
      * Entity.entityInit
      */
     @Override
-    protected void a() {
+    protected void entityInit() {
     }
 
     /**
      * Entity.onUpdate
      */
     @Override
-    public void j_() {
+    public void onUpdate() {
         //Obfuscation.setEntityPositionToPlayer(controller.getMinecraft(), this);
     }
 
@@ -63,18 +61,19 @@ public class RenderEntity extends Entity {
      * Entity.setDead
      */
     @Override
-    public void x() {
+    public void setDead() {
     }
 
     /**
      * Entity.whatEver()
      * Returns the name of the entity.
      * @return 
-     */
+     
     @Override
-    public String an() {
+    public String whatEver() {
         return "CUI";
     }
+    */
 
     /**
      * Entity.isInRangeToRenderVec3D
@@ -83,7 +82,7 @@ public class RenderEntity extends Entity {
      * @return 
      */
     @Override
-    public boolean a(Vec3 vector) {
+    public boolean isInRangeToRenderVec3D(Vec3 vector) {
         return true;
     }
 
@@ -94,7 +93,7 @@ public class RenderEntity extends Entity {
      * @return 
      */
     @Override
-    public int b(float f) {
+    public int getBrightnessForRender(float f) {
         return 0xf000f0;
     }
 
@@ -105,7 +104,7 @@ public class RenderEntity extends Entity {
      * @return 
      */
     @Override
-    public float c(float f) {
+    public float getBrightness(float f) {
         return 1f;
     }
 }

@@ -1,14 +1,15 @@
-package deobf;
+package wecui.fml;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import wecui.obfuscation.Obfuscation;
 
 public class EntityUpdateThread extends Thread {
 
-    private mod_WorldEditCUI mod;
+    private WorldEditCUIMod mod;
 
-    public EntityUpdateThread(mod_WorldEditCUI mod) {
+    public EntityUpdateThread(WorldEditCUIMod mod) {
         this.mod = mod;
     }
     

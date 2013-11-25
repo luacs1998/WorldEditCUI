@@ -2,8 +2,8 @@ package wecui.render.region;
 
 import wecui.WorldEditCUI;
 import wecui.render.LineColor;
-import wecui.render.shapes.Render3DBox;
 import wecui.render.points.PointCube;
+import wecui.render.shapes.Render3DBox;
 import wecui.render.shapes.Render3DGrid;
 import wecui.util.Vector3;
 import wecui.util.Vector3m;

@@ -1,13 +1,13 @@
 package wecui.obfuscation;
 
-import deobf.EntityClientPlayerMP;
-import deobf.NetClientHandler;
-import deobf.NetworkManager;
-import deobf.Packet;
-import deobf.Packet3Chat;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
+
+import net.minecraft.client.entity.EntityClientPlayerMP;
+import net.minecraft.client.multiplayer.NetClientHandler;
+import net.minecraft.network.packet.Packet;
+import net.minecraft.network.packet.Packet3Chat;
 import wecui.WorldEditCUI;
 import wecui.event.ChatCommandEvent;
 import wecui.event.OutgoingChatEvent;

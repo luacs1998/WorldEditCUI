@@ -40,3 +40,10 @@ Icon?
 Thumbs.db
 
 *.howto
+/build
+/bin
+.gradle/
+.settings/
+eclipse/
+.project
+.classpath

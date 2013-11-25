@@ -1,6 +1,5 @@
 package wecui.config;
 
-import wecui.exception.ConfigurationException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -8,10 +7,13 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.HashMap;
 import java.util.Map;
+
 import org.yaml.snakeyaml.DumperOptions;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.SafeConstructor;
 import org.yaml.snakeyaml.reader.UnicodeReader;
+
+import wecui.exception.ConfigurationException;
 
 /**
  * YAML configuration loader. To use this class, construct it with path to

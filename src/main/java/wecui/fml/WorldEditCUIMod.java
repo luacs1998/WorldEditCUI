@@ -1,17 +1,24 @@
-package deobf;
+package wecui.fml;
 
 import java.nio.charset.Charset;
-import wecui.WorldEditCUI;
-import wecui.render.RenderEntity;
-import wecui.render.RenderHooks;
 import java.util.Map;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.client.multiplayer.NetClientHandler;
+import net.minecraft.client.multiplayer.WorldClient;
+import net.minecraft.entity.Entity;
+import net.minecraft.network.packet.Packet250CustomPayload;
 import wecui.Updater;
+import wecui.WorldEditCUI;
 import wecui.event.ChannelEvent;
 import wecui.obfuscation.DataPacketList;
 import wecui.obfuscation.Obfuscation;
+import wecui.render.RenderEntity;
+import wecui.render.RenderHooks;
 import wecui.render.region.CuboidRegion;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
 
 /**
  * Main ModLoader class. Initializes the mod, enabling CUI communication 
@@ -22,7 +29,7 @@ import wecui.render.region.CuboidRegion;
  * @author lahwran
  * @author yetanotherx
  */
-public class mod_WorldEditCUI extends BaseMod {
+public class WorldEditCUIMod {
 
     protected WorldEditCUI controller;
     protected WorldClient lastWorld;
@@ -31,19 +38,16 @@ public class mod_WorldEditCUI extends BaseMod {
     protected boolean gameStarted = false;
     public final static Charset UTF_8_CHARSET = Charset.forName("UTF-8");
     protected int entityUpdateTickCount = 0;
-
-    public mod_WorldEditCUI() {
-        this.controller = new WorldEditCUI(ModLoader.getMinecraftInstance());
+    
+    @EventHandler
+    public void load(FMLInitializationEvent e){
+    	this.controller = new WorldEditCUI(ModLoader.getMinecraftInstance());
         this.controller.initialize();
 
         ModLoader.registerEntityID(RenderEntity.class, "CUI", ModLoader.getUniqueEntityId());
 
         ModLoader.setInGameHook(this, true, true);
         ModLoader.registerPacketChannel(this, "WECUI");
-    }
-
-    @Override
-    public void load() {
     }
 
     /**

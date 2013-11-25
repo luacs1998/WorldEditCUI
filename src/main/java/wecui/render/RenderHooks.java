@@ -1,9 +1,9 @@
 package wecui.render;
 
-import deobf.Entity;
-import deobf.Render;
-import wecui.event.WorldRenderEvent;
+import net.minecraft.client.renderer.entity.Render;
+import net.minecraft.entity.Entity;
 import wecui.WorldEditCUI;
+import wecui.event.WorldRenderEvent;
 import wecui.obfuscation.RenderObfuscation;
 
 /**
@@ -50,7 +50,7 @@ public class RenderHooks extends Render {
      * @param renderTick 
      */
     @Override
-    public void a(Entity entity, double x, double y, double z, float yaw, float renderTick) {
+    public void doRender(Entity entity, double x, double y, double z, float yaw, float renderTick) {
         renderCUI(entity, x, y, z, yaw, renderTick);
     }
 }

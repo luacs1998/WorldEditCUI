@@ -1,9 +1,9 @@
 package wecui.event;
 
-import wecui.util.Utilities;
+import wecui.WorldEditCUI;
 import wecui.fevents.Event;
 import wecui.fevents.HandlerList;
-import wecui.WorldEditCUI;
+import wecui.util.Utilities;
 
 /**
  * CUI communication event

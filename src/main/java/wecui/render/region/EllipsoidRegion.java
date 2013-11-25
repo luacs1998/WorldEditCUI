@@ -2,8 +2,8 @@ package wecui.render.region;
 
 import wecui.WorldEditCUI;
 import wecui.render.LineColor;
-import wecui.render.shapes.RenderEllipsoid;
 import wecui.render.points.PointCube;
+import wecui.render.shapes.RenderEllipsoid;
 import wecui.util.Vector3;
 
 /**

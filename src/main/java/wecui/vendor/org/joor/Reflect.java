@@ -35,13 +35,14 @@
  */
 package wecui.vendor.org.joor;
 
-import wecui.exception.ReflectException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.LinkedHashMap;
 import java.util.Map;
+
+import wecui.exception.ReflectException;
 
 /**
  * A wrapper for an {@link Object} or {@link Class} upon which reflective calls

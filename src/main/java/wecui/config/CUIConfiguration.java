@@ -1,12 +1,13 @@
 package wecui.config;
 
-import deobf.mod_WorldEditCUI;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+
 import wecui.InitializationFactory;
 import wecui.WorldEditCUI;
+import wecui.fml.WorldEditCUIMod;
 import wecui.obfuscation.Obfuscation;
 import wecui.render.LineColor;
 
@@ -51,7 +52,7 @@ public class CUIConfiguration implements InitializationFactory {
         file.getParentFile().mkdirs();
 
         if (!file.exists()) {
-            InputStream input = mod_WorldEditCUI.class.getResourceAsStream("/Configuration.yml");
+            InputStream input = WorldEditCUIMod.class.getResourceAsStream("/Configuration.yml");
             if (input != null) {
                 FileOutputStream output = null;
 

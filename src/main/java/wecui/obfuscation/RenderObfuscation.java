@@ -1,7 +1,7 @@
 package wecui.obfuscation;
 
-import deobf.RenderHelper;
-import deobf.Tessellator;
+import net.minecraft.client.renderer.RenderHelper;
+import net.minecraft.client.renderer.Tessellator;
 
 /**
  * Singleton obfuscation class for dealing
@@ -9,8 +9,6 @@ import deobf.Tessellator;
  * 
  * @author yetanotherx
  * @author lahwran
- * 
- * @obfuscated 1.4.5
  */
 public class RenderObfuscation {
 

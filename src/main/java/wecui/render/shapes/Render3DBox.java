@@ -1,6 +1,7 @@
 package wecui.render.shapes;
 
 import org.lwjgl.opengl.GL11;
+
 import wecui.obfuscation.RenderObfuscation;
 import wecui.render.LineColor;
 import wecui.render.LineInfo;
